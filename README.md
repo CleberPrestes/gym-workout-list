@@ -1,5 +1,8 @@
 # gym-workout-list
 
+# Layout de telas
+https://www.figma.com/file/n7m8odEMe0KxBLybz1Twau/GymApp?node-id=9%3A284
+
 # Checklist
 
 - [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.
