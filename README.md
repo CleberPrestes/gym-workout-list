@@ -7,7 +7,7 @@ https://www.figma.com/file/n7m8odEMe0KxBLybz1Twau/GymApp?node-id=9%3A284
 
 - [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.
 - [x] Criar branches feature a partir do branch develop para cada nova funcionalidade a ser implementada. 
-- [ ] Usar algum framework CSS (Bootstrap, Materialize ou outro).
+- [x] Usar algum framework CSS (Bootstrap, Materialize ou outro).
 - [ ] Apresentar as telas com layout responsivo.
 - [ ] Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro)
 - [ ] Apresentar as telas com layout responsivo usando ou não algum framework CSS.
