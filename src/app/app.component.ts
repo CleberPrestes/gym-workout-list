@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'gym-workout-list-app';
+
+  isHideLogin = true;
+
+
+  onButtonClick(){
+
+    this.isHideLogin = false;
+
+  }
+
+  onButtonClickAgain() {
+    this.isHideLogin = true;
+
+  }
+
+
 }
