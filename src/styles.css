@@ -8,7 +8,7 @@
 
 body,
 html {
-  background-color: #ededed !important;
+  background-color: #faf8f8 !important;
 }
 
 hr {
@@ -61,6 +61,8 @@ hr {
 
 .my-card-button {
   cursor: pointer;
+  border-radius: 20px;
+
 }
 
 table > tbody > tr {
@@ -135,6 +137,16 @@ main {
   margin-bottom: 15px;
 }
 
+.newtraining{
+
+  text-align: center;
+  padding-top: 13%;
+  padding-bottom: 13%;
+  margin-bottom: 50px;
+  background-size: cover;
+  
+
+}
 
 
 .intro {
@@ -198,7 +210,7 @@ main {
 }
 
 footer {
-  padding-top: 0px;
+  padding-top: 10px;
 }
 
 
