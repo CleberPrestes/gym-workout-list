@@ -2,6 +2,6 @@ import { Training } from './training.model';
 
 describe('Training', () => {
   it('should create an instance', () => {
-    expect(new Training('testemodel')).toBeTruthy();
+    expect(new Training()).toBeTruthy();
   });
 });

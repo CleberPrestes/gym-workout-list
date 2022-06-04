@@ -7,19 +7,22 @@
           id="entrada-treino"
           class="card-panel red accent-4 center my-card-button"
         >
-          <input id="nome-treino" type="text" [(ngModel)]="nameTraining" name="name"/>
+        <input id="treino-name"
+         [(ngModel)]="training.name" placeholder="Nome do treino" >
 
         </div>
       </a>
     </div>
   </div>
 
-  <h4 class="grey-text text-darken-1">Dias de treino</h4>
+  <h4 class="grey-text text-darken-1">Dia de treino</h4>
   <div class="row">
-    <div class="col s12 m2 offset-m5">
+    <div class="col s12 m6 offset-m3">
       <a>
         <div class="card-panel red accent-4 center my-card-button">
-          <input id="dias-treino" type="text" class="validate" />
+          <input id="treino-name"
+          [(ngModel)]="training.day" placeholder="Dia do treino" >
+
         </div>
       </a>
     </div>
@@ -51,7 +54,7 @@
         <div class="col s12 m6 offset-m3" >
           <a routerLink="">
             <div class="card-panel amber accent-4 center my-card-button">
-              <span class="white-text flow-text"> SALVAR </span>
+              <span class="white-text flow-text" (click)="saveStorage(training.name, training.day, training.exercise, training.serie, training.repetition, training.weight)"> SALVAR </span>
             </div>
           </a>
         </div>
