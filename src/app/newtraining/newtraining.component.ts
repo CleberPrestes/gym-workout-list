@@ -9,21 +9,18 @@ import { AfterViewInit, Component, Input, OnInit, Output } from '@angular/core';
 })
 export class NewtrainingComponent implements OnInit{
 
-  nameTraining: string ='treino teste'
-
-
   training: Training = new Training;
 
-  name = this.training.name;
-  day = this.training.day;
-  exercise = this.training.exercise;
-  serie = this.training.serie;
-  repetition = this.training.repetition;
-  weight = this.training.weight
+ // name = this.training.name;
+ // day = this.training.day;
+ // exercise = this.training.exercise;
+ // serie = this.training.serie;
+ // repetition = this.training.repetition;
+ // weight = this.training.weight
 
+  nameTraining: string ='treino teste saida'
 
   trainingList=[{}]
-
 
   saveStorage(name: string, day: string, exercise: string, serie: number, repetition: number, weight: number){
 
@@ -34,15 +31,13 @@ export class NewtrainingComponent implements OnInit{
     this.training.repetition = repetition;
     this.training.weight =weight;
 
+    this.saveList()
 
-   // let jsonTreinos = JSON.stringify(this.treino)
-    //localStorage[this.keytreinos] =jsonTreinos;
-
-
-    this.trainingList.push(this.training)
+    alert('Treino Salvo')
+  }
 
 
-    //Esta salvando a lista no loca storage
+  saveList(){
 
 
     if( JSON.parse(localStorage.getItem('listaTreino')!)){
@@ -50,11 +45,33 @@ export class NewtrainingComponent implements OnInit{
       this.trainingList.push(this.training)
       let jsonKeyList = JSON.stringify(this.trainingList)
       localStorage['listaTreino'] =jsonKeyList;
-
      }
+
         let jsonKeyList = JSON.stringify(this.trainingList)
         localStorage['listaTreino'] =jsonKeyList;
 
+  }
+
+
+  onSubmit() {
+    /*
+    this.isSubmitted = true;
+    if (!this.userService.isExist(this.user.username)) {
+      this.userService.save(this.user);
+    } else {
+      this.userService.update(this.user);
+    }
+    this.isShowMessage = true;
+    this.isSuccess = true;
+    this.message = 'Cadastro realizado com sucesso!';
+
+    this.form.reset();
+    this.user = new User('', '');
+
+    this.users = this.userService.getUsers();
+
+    this.userService.notifyTotalUsers();
+    */
   }
 
 

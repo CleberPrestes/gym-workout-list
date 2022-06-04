@@ -3,37 +3,41 @@
     <app-nametraining [nametraining]="informacaoPai"></app-nametraining>
   </h4>
 
-<!--Teste de select-->
 
-  <div class="row">
-    <div class="col s12 m6 offset-m3">
-      <a>
-        <div class="card-panel red accent-4 my-card-button">
-          <input type="text" class="validate" />
-        </div>
-      </a>
-    </div>
+  <table>
+  <thead>
+    <tr>
+      <th data-field="td-date">Nome</th>
+      <th data-field="td-value">Dia</th>
+      <th data-field="td-value">Exercicio</th>
+      <th data-field="td-date">Serie</th>
+      <th data-field="td-value">Repetições</th>
+      <th data-field="td-value">Peso</th>
+    </tr>
+  </thead>
 
-    <div class="m6 offset-m7">
-      <a routerLink="/weekdaytraining" class="btn-floating btn-large waves-effect waves-light amber"
-      ><i class="material-icons">send</i></a
-    >
-    </div>
-  </div>
-  <div class="container contact">
-    <div class="row">
-      <div id="painel-login" class="row">
-        <div class="col s12 m6 offset-m3">
-          <a routerLink="/newtraining">
-            <div
-              id="botao-login"
-              class="card-panel yellow accent-4 center my-card-button"
-            >
-              <span class="white-text flow-text"> VOLTAR </span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <tbody>
+    <tr *ngFor="let d of this.trainingListSave">
+      <td>{{d.name}}</td>
+      <td>{{d.day}}</td>
+      <td>{{d.exercise}}</td>
+      <td>{{d.serie}}</td>
+      <td>{{d.repetition}}</td>
+      <td>{{d.weight}}</td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+<button  routerLink="" class=" waves-effect waves-light btn-large  amber accent-4 center my-card-button white-text flow-text" >
+
+  <a >
+
+      <span class="white-text flow-text"> VOLTAR </span>
+
+  </a>
+
+  </button>
+
+
 </div>
