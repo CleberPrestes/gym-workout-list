@@ -1,0 +1,64 @@
+<div class="newtraining z-depth-1 center">
+  <h4 class="grey-text text-darken-1">Nome do Treino</h4>
+  <div id="painel-login" class="row">
+    <div class="col s12 m6 offset-m3">
+      <a>
+        <div
+          id="entrada-treino"
+          class="card-panel red accent-4 center my-card-button"
+        >
+        <input id="treino-name"
+         [(ngModel)]="training.name" placeholder="Nome do treino" >
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <h4 class="grey-text text-darken-1">Dia de treino</h4>
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <a>
+        <div class="card-panel red accent-4 center my-card-button">
+          <input id="treino-name"
+          [(ngModel)]="training.day" placeholder="Dia do treino" >
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container contact">
+    <div class="row">
+      <div class="row">
+        <div class="col s12 m6 offset-m3">
+          <a routerLink="/newedittraining">
+            <div class="card-panel red accent-4 center my-card-button">
+              <span class="white-text flow-text"> CONTINUAR </span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m6 offset-m3">
+          <a routerLink="">
+            <div class="card-panel amber accent-4 center my-card-button">
+              <span class="white-text flow-text"> VOLTAR </span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m6 offset-m3" >
+          <a routerLink="">
+            <div class="card-panel amber accent-4 center my-card-button">
+              <span class="white-text flow-text" (click)="saveStorage(training.name, training.day, training.exercise, training.serie, training.repetition, training.weight)"> SALVAR </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
