@@ -1,6 +1,7 @@
 import { Training } from './../training.model';
 import { NewtrainingComponent } from './../newtraining/newtraining.component';
 import { Component, Input, OnInit, Output } from '@angular/core';
+import { TrainingserviceService } from '../trainingservice.service';
 
 @Component({
   selector: 'app-newtrainingedit',
@@ -19,11 +20,24 @@ export class NewtrainingeditComponent implements OnInit {
   @Output() informacaoPai =  'Treinos'
 
 
-  constructor() { }
+  constructor(private trainingService: TrainingserviceService) {
+    this.getTrainings()
+  }
 
   ngOnInit(): void {
 
-    this.trainingListSave = JSON.parse(localStorage.getItem('listaTreino')!) as Training[];
+
+
+
+    this.trainingService
+    .getTraininigWithPromise()
+    .then((trainingListSave)=>(this.trainingListSave = trainingListSave))
+    .catch((e) => {
+      //erro ao pegar do json-server
+      this.trainingListSave = JSON.parse(localStorage.getItem('listaTreino')!) as Training[];
+      alert('Json-sever fora de funcionamento dados apresentados são do LocalStorage')
+    });
+
 
 
   }
@@ -36,12 +50,29 @@ export class NewtrainingeditComponent implements OnInit {
 
   }
 
+
+  testRemoveComService(training: Training){
+
+   this.trainingListSave = this.trainingListSave.filter((a)=>(training.name!==a.name))
+
+
+    //this.trainingService.removeTraining(training.name).subscribe()
+    this.trainingService.removeTraining(training.id).subscribe()
+
+    //this.ngOnInit()
+
+  }
   onSelectChange(event: Event) {
 
 
   }
   onSubmit() {
 
+
+  }
+  getTrainings(): void{
+
+    this.trainingService.getAll().subscribe((trainingListSave)=>(this.trainingListSave = trainingListSave));
 
   }
 
