@@ -1,13 +1,14 @@
 import { AppModule } from './../app.module';
 import { Training } from './../training.model';
 import { AfterViewInit, Component, Input, OnInit, Output } from '@angular/core';
+import * as M from 'materialize-css'
 
 @Component({
   selector: 'app-newtraining',
   templateUrl: './newtraining.component.html',
   styleUrls: ['./newtraining.component.css']
 })
-export class NewtrainingComponent implements OnInit{
+export class NewtrainingComponent implements OnInit,  AfterViewInit{
 
   training: Training = new Training;
 
@@ -74,10 +75,24 @@ export class NewtrainingComponent implements OnInit{
     */
   }
 
+  onSelectChange(event: Event){
+    this.training.day = (event.target as HTMLInputElement).value;
+   
+  }
 
 
 
   constructor() { }
+ ngAfterViewInit(): void {
+  var elems = document.querySelectorAll('select');
+  M.FormSelect.init(elems, {});
+  }
+
+ // ngAfterViewInit() {
+  //  var elems = document.querySelectorAll('select');
+ //   M.FormSelect.init(elems, {});
+ // }
+
 
   ngOnInit(): void {
   }

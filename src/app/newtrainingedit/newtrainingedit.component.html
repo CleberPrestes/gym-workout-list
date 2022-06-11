@@ -7,23 +7,26 @@
   <table>
   <thead>
     <tr>
-      <th data-field="td-date">Nome</th>
-      <th data-field="td-value">Dia</th>
-      <th data-field="td-value">Exercicio</th>
-      <th data-field="td-date">Serie</th>
-      <th data-field="td-value">Repetições</th>
-      <th data-field="td-value">Peso</th>
+      <th data-field="td-date" class="center">Nome</th>
+      <th data-field="td-value" class="center">Dia</th>
+      <th data-field="td-value"class="center">Exercicio</th>
+      <th data-field="td-date"class="center">Serie</th>
+      <th data-field="td-value"class="center">Repetições</th>
+      <th data-field="td-value"class="center">Peso</th>
     </tr>
   </thead>
 
   <tbody>
     <tr *ngFor="let d of this.trainingListSave">
-      <td>{{d.name}}</td>
-      <td>{{d.day}}</td>
-      <td>{{d.exercise}}</td>
-      <td>{{d.serie}}</td>
-      <td>{{d.repetition}}</td>
-      <td>{{d.weight}}</td>
+      <td class="center">{{d.name}}</td>
+      <td class="center">{{d.day}}</td>
+      <td class="center">{{d.exercise}}</td>
+      <td class="center">{{d.serie}}</td>
+      <td class="center">{{d.repetition}}</td>
+      <td class="center">{{d.weight}}</td>
+
+      <button  class="waves-effect waves-light btn-small  red darken-4" (click)="removeTraining(d)" >Remover</button>
+
     </tr>
 
   </tbody>

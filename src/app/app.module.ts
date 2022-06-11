@@ -15,6 +15,7 @@ import { WeekdaytrainingComponent } from './weekdaytraining/weekdaytraining.comp
 
 @NgModule({
   declarations: [
+
     AppComponent,
     MenuComponent,
     FooterComponent,
@@ -29,6 +30,7 @@ import { WeekdaytrainingComponent } from './weekdaytraining/weekdaytraining.comp
     BrowserModule,
     AppRoutingModule,
     FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

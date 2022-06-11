@@ -7,14 +7,15 @@
       <a>
         <div
           id="entrada-treino"
-          class="card-panel red accent-4 center my-card-button"
+          class=" card-panel red accent-4 center my-card-button"
         >
 
          <input
+
          id="training-name"
           name="training-name"
           type="text"
-         class="validate"
+         class="validate amber-text"
          placeholder="Nome do treino"
          [(ngModel)]="training.name"
          pattern="[A-ZÀ-Úa-z]{6}\s\d{1}"
@@ -33,9 +34,9 @@
 
 
 
+<!--
 
-  <h4 class="grey-text text-darken-1">Dia de treino</h4>
-  <div class="row">
+    <div class="row">
     <div class="col s12 m6 offset-m3">
       <a>
         <div class="card-panel red accent-4 center my-card-button">
@@ -44,18 +45,65 @@
           class="validate"
           placeholder="Nome do treino"
           [(ngModel)]="training.day"
-          pattern="^[a-z]+([\.-]?[a-z]+)*"
+          pattern="[A-Z][a-z]+"
           #day="ngModel"
           required
           placeholder="Dia do treino" />
           <div class="white-text" [hidden]="day.valid || day.untouched">
-           dia deve ser uma palavra com letras minusculas.
+           Iniciar palavra com uma letra maiuscula depois letras minusculas.
           </div>
 
         </div>
       </a>
     </div>
   </div>
+
+-->
+  <h4 class="grey-text text-darken-1">Dia de treino</h4>
+
+
+
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <a>
+        <div class="card-panel red accent-4 center my-card-button">
+
+
+  <div class="row">
+    <div class="col s12" >
+      <select  (change)="this.onSelectChange($event)" >
+        <option value="-1" selected>Escolha um dia da semana</option>
+        <option value="Segunda">Segunda</option>
+        <option value="Terça">Terça</option>
+        <option value="Quarta">Quarta</option>
+        <option value="Quinta">Quinta</option>
+        <option value="Sexta">Sexta</option>
+        <option value="Sabado">Sabado</option>
+        <option value="Domingo">Domingo</option>
+      </select>
+
+
+    </div>
+  </div>
+
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <!--Inicio de Teste-->
+
+
+
+
+
+<!--Fim  de Teste-->
+
+
+
+
 
   <h4 class="grey-text text-darken-1">Exercicio</h4>
   <div class="row">
@@ -65,12 +113,12 @@
           <input id="training-exercise"  name="training-exercise"
           type="text" class="validate" placeholder="Nome do treino"
           [(ngModel)]="training.exercise"
-          pattern="^[a-z]+([\.-]?[a-z]+)*"
+          pattern="[A-Z][a-z]+"
           #exercise="ngModel"
           required
           placeholder="Exercicio" />
           <div class="white-text" [hidden]="exercise.valid || exercise.untouched">
-           Exercicio deve ser uma palavra com letras minusculas.
+            Iniciar palavra com uma letra maiuscula depois letras minusculas.
           </div>
 
 
@@ -83,8 +131,8 @@
     <div class="col s12 m6 offset-m3">
       <a>
         <div class="card-panel red accent-4 center my-card-button">
-          <input id="training-serie"  name="training-serie"
-          type="text" class="validate"
+          <input id="training-serie"  name="training-serie" min='0'
+          type="number" class="validate"
           [(ngModel)]="training.serie" placeholder="Series"
           pattern="\d+"
           #serie="ngModel"
@@ -107,7 +155,8 @@
           [(ngModel)]="training.repetition" placeholder="Repetições"
           pattern="\d+"
           #repetition="ngModel"
-          required >
+          required
+          type="number" min='0'>
           <div class="white-text" [hidden]="repetition.valid || repetition.untouched">
             Repetição deve ser um numero.
            </div>
@@ -125,6 +174,7 @@
         <div class="card-panel red accent-4 center my-card-button">
           <input id="training-weight"  name="training-weight"
           [(ngModel)]="training.weight" placeholder="Peso"
+          type="number" min='0'
           pattern="\d+"
           #weight="ngModel"
           required >

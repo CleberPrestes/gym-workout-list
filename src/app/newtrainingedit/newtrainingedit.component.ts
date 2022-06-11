@@ -28,6 +28,14 @@ export class NewtrainingeditComponent implements OnInit {
 
   }
 
+
+  removeTraining(item: Training){
+    this.trainingListSave.splice(this.trainingListSave.indexOf(item) , 1)
+    let jsonKeyList = JSON.stringify(this.trainingListSave)
+    localStorage['listaTreino'] =jsonKeyList;
+
+  }
+
   onSelectChange(event: Event) {
 
 
