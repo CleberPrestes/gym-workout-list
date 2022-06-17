@@ -1,3 +1,4 @@
+import { Training } from './../training.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -9,9 +10,16 @@ export class NametrainingComponent implements OnInit {
 
   @Input() nametraining: string | undefined;
 
+  @Input() listatraining: Training[] =[]
+
+
   constructor() { }
 
   ngOnInit(): void {
+
+
+
+
   }
 
 }

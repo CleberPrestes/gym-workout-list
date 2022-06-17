@@ -5,6 +5,15 @@
 @import url("http://fonts.googleapis.com/icon?family=Material+Icons");
 
 
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
+
 
 body,
 html {
@@ -17,10 +26,6 @@ hr {
   border-width: medium;
 }
 
-.my-invalid-input {
-  border-color: red !important;
-  border-left-width: medium !important;
-}
 
 
 .my-logo-text {
@@ -73,22 +78,6 @@ table > tbody > tr {
   background-color: #5900ff;
 }
 
-@media (max-width: 600px) {
-  .my-logo {
-    height: 64px;
-  }
-  #utfpr-footer {
-    margin: auto;
-    display: block;
-  }
-}
-
-@media (max-width: 992px) {
-  #utfpr-footer {
-    margin: auto;
-    display: block;
-  }
-}
 
 /*
 	Fixa o rodapé
@@ -104,9 +93,7 @@ main {
   flex: 1 0 auto;
 }
 
-/**
-	Estilo about
-*/
+
 
 .about .col {
   margin-bottom: 24px;
@@ -174,41 +161,6 @@ main {
 }
 
 
-.contact .col {
-  margin-bottom: 24px;
-}
-
-.contact h5 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-.contact h6 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 45px;
-}
-
-.contact hr {
-  width: 40px;
-  margin-bottom: 45px;
-}
-
-.contact .contact-holder {
-  padding-left: 40px;
-  text-align: left;
-}
-
-.contact .contact-holder h6 {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.contact .contact-holder p {
-  margin-bottom: 30px;
-}
-
 footer {
   padding-top: 10px;
 }
@@ -222,9 +174,3 @@ footer {
   font-style: normal;
 }
 
-.my-balance {
-  padding: 20px 0px !important;
-  font-size: 3em;
-  font-family: "airborne";
-  text-align: center;
-}

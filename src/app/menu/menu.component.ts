@@ -7,14 +7,12 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-
-  @ViewChild('mobile') sideNav?: ElementRef;
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  @ViewChild('mobile') sideNav?: ElementRef;
 
   ngAfterViewInit(): void {
     M.Sidenav.init(this.sideNav?.nativeElement);

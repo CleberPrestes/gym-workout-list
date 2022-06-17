@@ -25,23 +25,29 @@ export class TrainingserviceService {
 */
 
   removeTraining(id: number){
-
     return this.http.delete<Training>(`${this.apiUrl}/${id}`);
-
   }
+
+
   getAll(): Observable<Training[]>{
 
    return this.http.get<Training[]>(this.apiUrl);
   }
 
+
   adddTraining(training: Training){
-
     return this.http.post<Training>(this.apiUrl, training);
-
   }
 
 
   getTraininigWithPromise(): Promise<Training[]> {
     return this.http.get<Training[]>(this.apiUrl).toPromise();
   }
+
+  getTraininigWithObservable():Observable<Training[]>{
+    return this.http.get<Training[]>(this.apiUrl)
+  }
+
+
+
 }

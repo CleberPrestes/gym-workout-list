@@ -1,3 +1,4 @@
+import { xPipe } from './x.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
@@ -8,11 +9,10 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandpageComponent } from './landpage/landpage.component';
 import { NewtrainingComponent } from './newtraining/newtraining.component';
-import { SavetrainingComponent } from './savetraining/savetraining.component';
-import { NewtrainingeditComponent } from './newtrainingedit/newtrainingedit.component';
 import { NametrainingComponent } from './nametraining/nametraining.component';
-import { WeekdaytrainingComponent } from './weekdaytraining/weekdaytraining.component';
 import { HttpClientModule } from '@angular/common/http';
+import { KgPipe } from './kg.pipe';
+import { TrainingslistComponent } from './trainingslist/trainingslist.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     LandpageComponent,
     NewtrainingComponent,
-    SavetrainingComponent,
-    NewtrainingeditComponent,
     NametrainingComponent,
-    WeekdaytrainingComponent
+    KgPipe,
+    xPipe,
+    TrainingslistComponent
   ],
   imports: [
     BrowserModule,

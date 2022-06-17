@@ -35,13 +35,13 @@ export class NewtrainingComponent implements OnInit,  AfterViewInit{
     this.training.repetition = repetition;
     this.training.weight =weight;
 
-    this.saveList()
+    this.saveListLocal()
 
     alert('Treino Salvo')
   }
 
 
-  saveList(){
+  saveListLocal(){
 
 
     if( JSON.parse(localStorage.getItem('listaTreino')!)){
@@ -58,31 +58,14 @@ export class NewtrainingComponent implements OnInit,  AfterViewInit{
 
 
   onSubmit() {
-    /*
-    this.isSubmitted = true;
-    if (!this.userService.isExist(this.user.username)) {
-      this.userService.save(this.user);
-    } else {
-      this.userService.update(this.user);
-    }
-    this.isShowMessage = true;
-    this.isSuccess = true;
-    this.message = 'Cadastro realizado com sucesso!';
 
-    this.form.reset();
-    this.user = new User('', '');
 
-    this.users = this.userService.getUsers();
-
-    this.userService.notifyTotalUsers();
-    */
   }
 
   onSelectChange(event: Event){
     this.training.day = (event.target as HTMLInputElement).value;
 
   }
-
 
 
   constructor(private trainingService: TrainingserviceService) {
@@ -94,13 +77,14 @@ export class NewtrainingComponent implements OnInit,  AfterViewInit{
   M.FormSelect.init(elems, {});
   }
 
- // ngAfterViewInit() {
+  // ngAfterViewInit() {
   //  var elems = document.querySelectorAll('select');
- //   M.FormSelect.init(elems, {});
- // }
+  //   M.FormSelect.init(elems, {});
+  // }
 
 
   ngOnInit(): void {
+
 
   }
 

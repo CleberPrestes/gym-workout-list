@@ -11,9 +11,24 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 })
 export class LandpageComponent implements OnInit {
 
+
+  // Uso do ngif
+  showButtons = false;
+
+  showButton(){
+    this.showButtons = true;
+  }
+
+  hideButton(){
+    this.showButtons = false;
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
+
+
   }
 
 }

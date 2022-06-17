@@ -7,4 +7,8 @@ export class Training {
   serie: number=0;
   repetition: number=0;
  weight: number=0;
+
 }
+
+
+
