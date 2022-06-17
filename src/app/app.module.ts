@@ -12,6 +12,7 @@ import { SavetrainingComponent } from './savetraining/savetraining.component';
 import { NewtrainingeditComponent } from './newtrainingedit/newtrainingedit.component';
 import { NametrainingComponent } from './nametraining/nametraining.component';
 import { WeekdaytrainingComponent } from './weekdaytraining/weekdaytraining.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { WeekdaytrainingComponent } from './weekdaytraining/weekdaytraining.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [],
