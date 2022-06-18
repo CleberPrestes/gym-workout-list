@@ -27,7 +27,7 @@ export class TrainingslistComponent implements OnInit {
 
     //Lista com promisses
 
-    /*
+  
     this.trainingService
     .getTraininigWithPromise()
     .then((trainingListSave)=>(this.trainingListSave = trainingListSave))
@@ -36,11 +36,11 @@ export class TrainingslistComponent implements OnInit {
       this.trainingListSave = JSON.parse(localStorage.getItem('listaTreino')!) as Training[];
       alert('Json-sever fora de funcionamento dados apresentados são do LocalStorage')
     });
-*/
+
     //Lista com Observable
-      this.trainingService
-      .getTraininigWithObservable().subscribe()
-    alert('Dados do Json-sever com Observable')
+    //  this.trainingService
+   //   .getTraininigWithObservable().subscribe()
+   // alert('Dados do Json-sever com Observable')
 
 
 

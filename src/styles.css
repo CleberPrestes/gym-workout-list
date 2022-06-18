@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-
-@import "~materialize-css\dist\css\materialize.css";
-@import "material-icons\css\material-icons.css";
-@import url("http://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~materialize-css/dist/css/materialize.css";
+@import "~material-icons/iconfont/material-icons.css";
 
 
 * {
