@@ -7,11 +7,8 @@
       <a>
         <div
           id="entrada-treino"
-          class=" card-panel red accent-4 center my-card-button"
-        >
-
+          class=" card-panel red accent-4 center my-card-button">
          <input
-
          id="training-name"
           name="training-name"
           type="text"
@@ -22,11 +19,9 @@
          #name="ngModel"
          required
        />
-
        <div class="white-text" [hidden]="name.valid || name.untouched">
          Nome do treino deve ser uma palavra  de 6 carcateres seguida de numero.
        </div>
-
         </div>
       </a>
     </div>
@@ -34,14 +29,10 @@
 
   <h4 class="grey-text text-darken-1">Dia de treino</h4>
 
-
-
   <div class="row">
     <div class="col s12 m6 offset-m3">
       <a>
         <div class="card-panel red accent-4 center my-card-button">
-
-
   <div class="row">
     <div class="col s12" >
       <select  (change)="this.onSelectChange($event)" >
@@ -54,12 +45,8 @@
         <option value="Sabado">Sabado</option>
         <option value="Domingo">Domingo</option>
       </select>
-
-
     </div>
   </div>
-
-
         </div>
       </a>
     </div>
@@ -82,7 +69,6 @@
             Iniciar palavra com uma letra maiuscula depois letras minusculas.
           </div>
 
-
         </div>
       </a>
     </div>
@@ -101,7 +87,6 @@
           <div class="white-text" [hidden]="serie.valid || serie.untouched">
             Serie deve ser um numero.
            </div>
-
         </div>
       </a>
     </div>
@@ -121,11 +106,9 @@
           <div class="white-text" [hidden]="repetition.valid || repetition.untouched">
             Repetição deve ser um numero.
            </div>
-
         </div>
       </a>
     </div>
-
   </div>
 
   <h4 class="grey-text text-darken-1">Peso</h4>
@@ -142,44 +125,31 @@
           <div class="white-text" [hidden]="weight.valid || weight.untouched">
             Peso deve ser um numero.
            </div>
-
         </div>
       </a>
     </div>
   </div>
-
-
 
   <div class="container contact">
     <div class="row">
       <button
       class=" waves-effect waves-light btn-large card-panel amber accent-4 center my-card-button  white-text flow-text"
       type="submit"
-      (click)="addTraining(training)"
-      [disabled]="!form.valid"
-    >
-      SALVAR
-
-    </button>
-
+      (click)="saveListLocal()"
+      [disabled]="!form.valid">SALVAR</button>
+      <br>
+      <button
+      class=" waves-effect waves-light btn-large card-panel amber accent-4 center my-card-button  white-text flow-text"
+         (click)="addTraining(training)"
+      [disabled]="!form.valid">SALVAR JSON SERVER</button>
     <br>
-
-    <button   class=" waves-effect waves-light btn-large  amber accent-4 center my-card-button white-text flow-text" >
-
-    <a routerLink="">
-
+    <button   class=" waves-effect waves-light btn-large  amber accent-4 center my-card-button white-text flow-text"  routerLink="">
+    <a >
         <span class="white-text flow-text"> VOLTAR </span>
-
     </a>
-
     </button>
-
-
-
     </div>
   </div>
 </div>
-
-
 
 </form>
