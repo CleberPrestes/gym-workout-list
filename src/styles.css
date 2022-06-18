@@ -139,7 +139,7 @@ main {
   padding-top: 13%;
   padding-bottom: 13%;
   margin-bottom: 50px;
-  background-image: url("assets/images/academia.png");
+  /*background-image: url("assets/images/academia.png");*/
   background-repeat: no-repeat;
   background-size: cover;
 }
