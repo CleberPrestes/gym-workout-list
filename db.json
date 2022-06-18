@@ -44,6 +44,24 @@
       "serie": 3,
       "repetition": 15,
       "weight": 10
+    },
+    {
+      "id": "s49wxQQ",
+      "name": "Treino 2",
+      "day": "Sexta",
+      "exercise": "Supino",
+      "serie": 1,
+      "repetition": 1,
+      "weight": 1
+    },
+    {
+      "id": "_zixa1J",
+      "name": "Treino 7",
+      "day": "Domingo",
+      "exercise": "Legpress",
+      "serie": 1,
+      "repetition": 1,
+      "weight": 1
     }
   ]
 }
