@@ -1,26 +1,57 @@
-<div class="newtraining z-depth-1 my-logo-text center">
-  <h4 class="grey-text text-darken-1">
-    <h4>LISTA DE TREINOS </h4>
-  </h4>
-  <table class="center">
+
+
+<div class="newtraining my-logo-text center">
+
+  <h2 class="grey-text text-darken-1">
+    <app-nametraining [nametraining]="informacaoPai" ></app-nametraining>
+  </h2>
+
+  <h5>{{dataOrigin}}</h5>
+
+  <!--
+   Carrega circulo para aguardar lista
+  <div class="app-loading">
+    <div class="logo"></div>
+    <svg class="spinner" viewBox="25 25 50 50">
+      <circle
+        class="path"
+        cx="50"
+        cy="50"
+        r="20"
+        fill="none"
+        stroke-width="2"
+        stroke-miterlimit="10"
+      />
+    </svg>
+  </div>
+
+
+  -->
+
+
+  <table class="highlight centered">
   <thead >
 
   </thead>
   <tbody >
-    <tr *ngFor="let d of this.trainingListSave"  >
-      <td class="center">{{d.name}}</td>
-      <button  class="waves-effect waves-light btn-small  red darken-4" (click)="removeTraining(d)" >Del Local</button>
-      <button  class="waves-effect waves-light btn-small  grey darken-4" (click)="testRemoveComService(d)" >Del Server</button>
-      <button  class="waves-effect waves-light btn-small  amber " (click)="getTrainingDetail(d)" >Detalhes</button>
+    <tr *ngFor="let d of this.trainingListSave" >
+
+      <td >{{d.name}}</td>
+      <td ><button  class="waves-effect waves-light btn-small  red darken-4" (click)="removeTraining(d)" *ngIf="this.localOrigin" >Del Local</button></td>
+      <td ><button  class="waves-effect waves-light btn-small  grey darken-4" (click)="testRemoveComService(d)" *ngIf="this.jsonOrigin">Del Server</button></td>
+
+      <td><button  class="waves-effect waves-light btn-small  amber "  [routerLink]="['/trainingslist/detail', d.id]">Detalhes</button></td>
+
     </tr>
   </tbody>
 </table>
 
+<!--
 
 <p>Uso de pipes para formatar detalhes de series e pesos</p>
 
 
-<app-nametraining [nametraining]="informacaoPai" [listatraining]="listaOutput"></app-nametraining>
+<app-nametraining [nametraining]="informacaoPai" ></app-nametraining>
 
 
 <table>
@@ -45,10 +76,14 @@
 </table>
 
 
+
+-->
+
 <br>
 <button  routerLink="" class=" waves-effect waves-light btn-large  amber accent-4 center my-card-button white-text flow-text" >
-  <a >
-      <span class="white-text flow-text"> VOLTAR </span>
-  </a>
+  <a >  <span class="white-text flow-text"> VOLTAR </span>  </a>
   </button>
+
+
+
 </div>

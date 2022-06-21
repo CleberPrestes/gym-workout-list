@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*@import url("http://fonts.googleapis.com/icon?family=Material+Icons");*/
+
 @import "~materialize-css/dist/css/materialize.css";
 @import "~material-icons/iconfont/material-icons.css";
 
@@ -10,7 +13,6 @@
   list-style: none;
   border: 0;
 }
-
 
 
 body,
@@ -25,13 +27,12 @@ hr {
 }
 
 
-
 .my-logo-text {
   font-family: "airborne";
 }
 
 .my-logo {
-  height: 64px;
+  height: 60px;
 }
 
 .my-header {
@@ -72,11 +73,6 @@ table > tbody > tr {
   cursor: pointer;
 }
 
-.my-selected-table-row {
-  background-color: #5900ff;
-}
-
-
 /*
 	Fixa o rodapé
 */
@@ -90,7 +86,6 @@ body {
 main {
   flex: 1 0 auto;
 }
-
 
 
 .about .col {
@@ -138,8 +133,8 @@ main {
   text-align: center;
   padding-top: 13%;
   padding-bottom: 13%;
+  background-image: url("assets/images/academia.png");
   margin-bottom: 50px;
-  /*background-image: url("assets/images/academia.png");*/
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -172,3 +167,60 @@ footer {
   font-style: normal;
 }
 
+
+
+
+.app-loading {
+  margin-top: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.app-loading .spinner {
+  height: 200px;
+  width: 200px;
+  animation: rotate 2s linear infinite;
+  transform-origin: center center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.app-loading .spinner .path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #b4a90d;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}

@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gym-workout-list-app",
+            "outputPath": "dist/buildteste",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -36,6 +36,7 @@
           },
           "configurations": {
             "production": {
+              "sourceMap": true,
               "budgets": [
                 {
                   "type": "initial",

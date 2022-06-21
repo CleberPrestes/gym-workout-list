@@ -29,13 +29,19 @@ export class TrainingserviceService {
   }
 
 
+  getByIdLocal(id: any) {
+
+    return this.trainingListSave.find(training => training.id === id)
+  }
+
+
   getAll(): Observable<Training[]>{
 
    return this.http.get<Training[]>(this.apiUrl);
   }
 
 
-  adddTraining(training: Training){
+  addTraining(training: Training){
     return this.http.post<Training>(this.apiUrl, training);
   }
 
@@ -48,6 +54,16 @@ export class TrainingserviceService {
     return this.http.get<Training[]>(this.apiUrl)
   }
 
+  getTrainingById(id: any):Observable<Training>{
+    return this.http.get<Training>(`${this.apiUrl}/${id}`)
+  }
+
+
+
 
 
 }
+
+
+
+

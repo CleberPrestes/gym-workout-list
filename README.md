@@ -17,7 +17,7 @@ https://www.figma.com/file/n7m8odEMe0KxBLybz1Twau/GymApp?node-id=9%3A284
 - [x] Passar dados via hierarquia de componentes, ou seja, usando @Input ou @Output.
 - [x] Mapear componentes à rotas no módulo de rotas.
 - [x] Criar navegação entre páginas por meio de rotas.
-- [ ] Passar dados entre componentes que representam diferentes telas via parâmetros de rotas.
+- [x] Passar dados entre componentes que representam diferentes telas via parâmetros de rotas.
 - [x] Validar campos do formulário com REGEX e apresentar os erros.
 - [x] Desabilitar o botão de submit enquanto o formulário está inválido.
 - [x] Fazer requisições a API com tratamento da resposta com Promises ou Observables.
