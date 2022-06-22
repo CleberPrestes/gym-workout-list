@@ -5,10 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --base-href=/gym-workout-list/",
-    "ghpages": "angular-cli-ghpages --dir=dist/gym-workout-list-app",
     "watch": "ng build --watch --configuration development",
-    "deploy": "npm run build & npm run ghpages",
+    "ghpages": "angular-cli-ghpages --dir=dist/buildteste",
     "test": "ng test",
+    "deploy": "npm run build & npm run ghpages",
     "server":"json-server --watch db.json"
   },
   "private": true,
