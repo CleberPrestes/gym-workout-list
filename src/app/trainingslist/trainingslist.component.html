@@ -8,26 +8,6 @@
 
   <h5>{{dataOrigin}}</h5>
 
-  <!--
-   Carrega circulo para aguardar lista
-  <div class="app-loading">
-    <div class="logo"></div>
-    <svg class="spinner" viewBox="25 25 50 50">
-      <circle
-        class="path"
-        cx="50"
-        cy="50"
-        r="20"
-        fill="none"
-        stroke-width="2"
-        stroke-miterlimit="10"
-      />
-    </svg>
-  </div>
-
-
-  -->
-
 
   <table class="highlight centered">
   <thead >
@@ -45,39 +25,6 @@
     </tr>
   </tbody>
 </table>
-
-<!--
-
-<p>Uso de pipes para formatar detalhes de series e pesos</p>
-
-
-<app-nametraining [nametraining]="informacaoPai" ></app-nametraining>
-
-
-<table>
-  <thead>
-    <tr>
-      <th data-field="td-value" class="center">Dia</th>
-      <th data-field="td-value"class="center">Exercicio</th>
-      <th data-field="td-date"class="center">Serie</th>
-      <th data-field="td-value"class="center">Repetições</th>
-      <th data-field="td-value"class="center">Peso</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let t of this.trainingListDetails">
-      <td class="center">{{t.day}}</td>
-      <td class="center">{{t.exercise}}</td>
-      <td class="center">{{t.serie | x}}</td>
-      <td class="center">{{t.repetition | x}}</td>
-      <td class="center">{{t.weight | kg }}</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
--->
 
 <br>
 <button  routerLink="" class=" waves-effect waves-light btn-large  amber accent-4 center my-card-button white-text flow-text" >
