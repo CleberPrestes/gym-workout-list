@@ -35,6 +35,7 @@ Foi utilizado o Json-sever como API, o tratamento de resposta utilizado foi para
 - [x] Cadastrar uma entidade no Web Storage.
 - [x] Cadastrar uma entidade no JSON Server.
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.A lista de treinos cadastrados é mostrada utilizando a diretiva ngFor.
-- [x] Usar a diretiva ngIf. A diretiva ngIf foi utilizada em varios lugares. Como exemplo no botão treinar que esconde ou mostra os botões de Novo treino e Treino Salvo.
+- [x] Usar a diretiva ngIf. A diretiva ngIf foi utilizada em varios lugares. Como exemplo no botão Vamos Treinar que esconde ou mostra os botões de Novo treino e Treino Salvo.
+- [x] Pipes são utilizados na formatação do valor de peso dos treinos.
 
 *Obs não foi possivel a total implementação de acordo com projeto do figma, porque considerava a utilização de inputs dinamicos e uma estrutura bastante complexa no JSon. Portanto optou-se por uma estrura mais simples que atendesse os requisitos do projeto.
