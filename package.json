@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/gym-workout-list/",
+    "build": "ng build --base-href=/buildteste/",
     "watch": "ng build --watch --configuration development",
     "ghpages": "angular-cli-ghpages --dir=dist/buildteste",
     "test": "ng test",

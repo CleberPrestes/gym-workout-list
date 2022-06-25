@@ -16,6 +16,7 @@ export class TrainingdetailComponent implements OnInit {
   trainingListSave: Training[] = []
   trainingListDetails: Training[]=[]
   localTraining!: Training;
+  showLoading: boolean = true;
 
   treinoteste: Observable<Training> = this.route.data.pipe(
     map(data => data.TrainingResolver)

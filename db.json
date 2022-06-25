@@ -1,15 +1,6 @@
 {
   "trainings": [
     {
-      "id": "Treino 01",
-      "name": "Treino 01",
-      "day": "Segunda",
-      "exercise": "Frances",
-      "serie": 3,
-      "repetition": 15,
-      "weight": 100
-    },
-    {
       "id": "Treino 02",
       "name": "Treino 02",
       "day": "Segunda",

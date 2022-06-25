@@ -18,6 +18,8 @@ export class TrainingslistComponent implements OnInit {
   dataOrigin: string='JSon-Server'
   jsonOrigin: boolean = true
   localOrigin: boolean= false
+  showLoading: boolean = true
+  showbntback: boolean = false
 
   @Output() informacaoPai =  'Lista de Treinos'
   @Output() listaOutput: Training[]=[]
@@ -32,22 +34,37 @@ export class TrainingslistComponent implements OnInit {
     this.trainingService
     .getTraininigWithPromise()
     .then((trainingListSave)=>(this.trainingListSave = trainingListSave))
+    .then((sholoading)=>(this.showLoading = false))
+    .then((showbntback)=>(this.showbntback = true))
     .catch((e) => {
       //erro ao pegar do json-server
       this.trainingListSave = JSON.parse(localStorage.getItem('listaTreino')!) as Training[];
+      this.dataOrigin = 'Local Storage'
+      
+      this.showLoading = false
+      this.jsonOrigin= false
+      this.localOrigin= true
+      this.showbntback = true
+
+    });
+
+    //Lista com Observable
+/*
+      this.trainingService
+      .getTraininigWithObservable().subscribe((data: Training[]) => {
+        this.trainingListSave = data;
+      },
+      error =>{
+        alert('Erro ao obter dados do Servidor utilizando dados Locais')
+        this.trainingListSave = JSON.parse(localStorage.getItem('listaTreino')!) as Training[];
       this.dataOrigin = 'Local Storage'
 
       this.jsonOrigin= false
       this.localOrigin= true
 
-    });
+      })
 
-    //Lista com Observable
-    /*
-      this.trainingService
-      .getTraininigWithObservable().subscribe()
-    alert('Dados do Json-sever com Observable')
-    */
+*/
   }
 
   removeTraining(item: Training){
