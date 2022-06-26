@@ -6,6 +6,9 @@ https://www.figma.com/file/n7m8odEMe0KxBLybz1Twau/GymApp?node-id=9%3A284
 # Repositorio de deploy
 https://cleberprestes.github.io/buildteste/
 
+# Passo a passo do projeto 
+https://drive.google.com/file/d/1LnDXEo-9JTOHH7tQn7bGQErhsyKfC8ql/view?usp=sharing
+
 * Obs - O projeto salva e obtem dados através do JSon-server e localStorage. O ao carregar os dados do LocalStorage a aplicação demora alguns segundos para carregar, porque inicialmente busca carregar dados do JSon-Server, caso ele não esteja ativo carrega os dados disponiveis no localStorage.
 
 # Script para rodar o JSon-Sever
