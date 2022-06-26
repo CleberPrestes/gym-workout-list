@@ -30,22 +30,50 @@
 
     <table>
       <thead>
-        <tr>
-          <th data-field="td-value" class="center">Dia</th>
-          <th data-field="td-value" class="center">Exercicio</th>
-          <th data-field="td-date" class="center">Serie</th>
-          <th data-field="td-value" class="center">Repetições</th>
-          <th data-field="td-value" class="center">Peso</th>
-        </tr>
+
+
+
+
+
       </thead>
       <tbody>
         <tr>
-          <td class="center">{{ Treino.day }}</td>
-          <td class="center">{{ Treino.exercise }}</td>
-          <td class="center">{{ Treino.serie | x }}</td>
-          <td class="center">{{ Treino.repetition | x }}</td>
-          <td class="center">{{ Treino.weight | kg }}</td>
+          <th data-field="td-value" class="center">Dia</th>
+
         </tr>
+        <tr>
+          <td class="center">{{ Treino.day }}</td>
+
+        </tr>
+        <tr>
+          <th data-field="td-value" class="center">Exercicio</th>
+
+        </tr>
+        <tr>
+          <td class="center">{{ Treino.exercise }}</td>
+
+        </tr>
+
+        <tr>
+          <th data-field="td-date" class="center">Serie</th>
+
+        </tr>
+
+        <tr> <td class="center">{{ Treino.serie | x }}</td>
+
+          <tr>
+            <th data-field="td-value" class="center">Repetições</th>
+
+          </tr>
+
+        <tr><td class="center">{{ Treino.repetition | x }}</td>
+         </tr>
+
+         <tr>
+          <th data-field="td-value" class="center">Peso</th>
+        </tr>
+        <tr> <td class="center">{{ Treino.weight | kg }}</td></tr>
+
       </tbody>
     </table>
     <br />
